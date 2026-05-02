@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgba(0, 212, 255);
+  background: linear-gradient(
+    48deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(251, 82, 131, 1) 100%
+  );
+
+  display: flex;
+  /* ALINHA NO EIXO PRINCIPAL */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.container {
+  width: 80%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+  /* ALINHAR OS ITENS DENTRO DO QUADRADO */
+  display: flex;
+  /* ALINHA UM EMBAIXO DO OUTRO */
+  flex-direction: column;
+  /* PARA OS ITENS FICAREM MAIS AFASTADOS DA MARGEM */
+  padding: 10px;
+  /* PARA O ITEM NAO ULTRASSAR O LUGAR DESEJADO */
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  /* ALTURA DAS MARGENS EM CIMA E NA LATERAL */
+  margin: 30px 0;
+}
+
+nav {
+  width: 100%;
+  text-align: right;
+}
+
+li {
+  /* TIRAR AS BOLINHAS */
+  list-style: none;
+  /* PARA UMA LISTA FICAR DO LADO DA OUTRA */
+  display: inline-block;
+  /* MARGEM PARA DIREITA(PARA UM NAO FICAR COLADO NO OUTRO) */
+  margin-right: 30px;
+}
+
+.nav-link {
+  /* PARA O MOUSE MUDAR PARA UMA MÃOZINHA QUANDO PASSAR NO LINK */
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+/* PARA QUANDO PASSAR O MOUSE EM CIMA, TROCAR DE COR */
+.nav-link:hover {
+  color: #fb5283;
+}
+
+.row {
+  display: flex;
+  /* CRIA UM ESPAÇO ENTRE AS CAIXAS */
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.column-1 {
+  margin-left: 50px;
+  position: relative;
+}
+
+h2 {
+  /* TAMANHO DA FONTE */
+  font-size: 54px;
+}
+
+h3 {
+  font-size: 30px;
+  color: #707070;
+  /* GROSSURA DA FONTE */
+  font-weight: 100;
+  margin: 20px 0;
+}
+
+.column-1 p {
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
+}
+
+.coloumn-1::before{
+  content: "";
+  width: 10px;
+  height: 57%;
+  background: linear-gradient(#ff469f, #ff6062);
+  position: absolute;
+  left: -40px;
+  top: 8px;
+}
+
+h4 {
+  font-size: 20px;
+  color: black;
+  margin: 30px 0;
+}
+
+.buy {
+  width: 140px;
+  border: none;
+  /* ESPAÇAMENTO INTERNO */
+  padding: 12px 10px;
+  outline: none;
+  color: #fff;
+  /* ARREDONDAR BORDA */
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 2;
+  background: linear-gradient(to right, #fb5283, #ff3527);
+}
+
+.column-2 {
+  display: flex;
+  /* DEIXAR OS ITENS ALINHADOS NO CENTRO */
+  align-items: center;
+  /* POSICIONAR O LUGAR DA DIV NA TELA */
+  position: relative;
+}
+
+.controller {
+  width: 90%;
+  z-index: 2;
+}
+
+.color-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(#ff54a2, #ff575a);
+  height: 100%;
+  width: 80%;
+  border-radius: 20px 0 0 20px;
+  /* DEFINE QUAL DIV FICA NA FRENTE */
+  z-index: 1;
+  transform: translateX(150px);
+}
+.add-cart {
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.add-cart img {
+  height: 45px;
+  width: 45px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links img {
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
