@@ -3,35 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Playstation Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Playstation Store</title>
 </head>
 
 <body>
+    <!-- CAIXA USADA PARA ARMAZENAR -->
     <div class="container">
+        <!-- OUTRA CAIXA MENOR, USADA COMO MENU DE NAVEGAÇÃO -->
         <div class="navbar">
+            <!-- "./" É USADO PARA PEGAR ITENS DE OUTROS ARQUIVO -->
             <img class="logo" src="./img/logo.png" alt="logo">
+            <!-- MENU DE NAVEGAÇÃO -->
             <nav>
-                <ul>
-                    <li><a class="nav-link">Consoles</a></li>
-                    <li><a class="nav-link">Acessórios</a></li>
-                    <li><a class="nav-link">Controles</a></li>
-                    <li><a class="nav-link">Outros</a></li>
+                <!-- LISTA -->
+                <ul id="menu-list">
+                    <!-- ITENS DA LISTA -->
+                    <!-- <A> É O LINK -->
+                    <li class="nav-li"><a class="nav-link">Consoles</a></li>
+                    <li class="nav-li"><a class="nav-link">Acessórios</a></li>
+                    <li class="nav-li"><a class="nav-link">Controles</a></li>
+                    <li class="nav-li"><a class="nav-link">Outros</a></li>
                 </ul>
-            </nav>
+             </nav>
+                                                               <!-- TODA VEZ QUE TOCA NA IMAGEM CHAMA ESSA FUNÇÃO -->
+            <img src="./img/menu.png" alt="botao-menu" class="menu-icon" onclick="showMenu()">
         </div>
-
 
         <div class="row">
             <div class="column-1">
-                <h2>PS5 Dualshok</h2>
-                <h3>Wireless Controller for PlayStation</h3>
+                <h2>PS5 Dualshock</h2>
+                <h3>Wireless Controler for Playstation</h3>
                 <p>Controle Original</p>
                 <h4>R$ 222,50</h4>
                 <button class="buy">Comprar agora</button>
@@ -54,5 +61,21 @@
 
     </div>
 </body>
+<script>
+    // VARIAVEL(ARMAZENA DADOS)
+    const menuList = document.getElementById("menu-list")
+    menuList.style.maxHeight = "0px"
+
+    // FUNÇÃO É UM TRECHO DO CÓDIGO QUE SÓ É CHAMADO QUANDO FAZ ALGUMA AÇÃO
+    function showMenu(){
+                                // DOIS IGUAIS É UMA COMPARAÇÃO PARA VERIFICAR
+        if(menuList.style.maxHeight == "0px"){
+                                // UM IGUAL INDICA QUE ESTÁ ATRIBUINDO UM VALOR
+           menuList.style.maxHeight = "120px"
+        } else {
+           menuList.style.maxHeight = "0px"
+        }
+    }
+</script>
 
 </html>
