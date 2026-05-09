@@ -84,7 +84,7 @@ li {
 }
 
 .column-1 {
-  margin-left: 50px;
+  -left: 50px;
   position: relative;
 }
 
@@ -135,6 +135,27 @@ h4 {
   cursor: pointer;
   z-index: 2;
   background: linear-gradient(to right, #fb5283, #ff3527);
+   transition: all 0.5s ease-in-out;
+}
+
+.buy img{
+  width: 30px;
+  display: none;
+}
+
+.buy:hover{
+  display: flex;
+  /* PARA USAR ESSES 3 ITENS, PRIMEIRO PRECISA UTILIZAR O DISPLAY: FLEX */
+  flex-direction: row;
+  /* ESSE VAI CENTRALIZAR */
+  align-items: center;
+  /* COLOCAR ESPAÇO PARA O LADO */
+  justify-content: space-between;
+  width: 150px;
+}
+
+.buy:hover img{
+  display: block;
 }
 
 .column-2 {
@@ -148,6 +169,7 @@ h4 {
 .controller {
   width: 90%;
   z-index: 2;
+  animation: moveController 2s infinite alternate ease-in-out;
 }
 
 .color-box {
@@ -193,6 +215,7 @@ h4 {
   /* DISTANCIA DA MARGEM DIREITA */
   margin-right: 15px;
   display: none;
+  
 }
 
 @media (max-width: 830px){
@@ -202,7 +225,7 @@ h4 {
     /* OCUPAR TODO TAMANHO DA TELA */
     height: 100vh;
     /* TIRAR TODA BORDA QUANDO DIMINUI A TELA */
-    border-radius: 20px;
+    border-radius: 0;
     overflow-y: auto;
   }
 
@@ -226,9 +249,14 @@ h4 {
     left: 60px;
     /* VAI ESCONDER QUANDO O TAMANHO ESTIVER 0px */
     overflow: hidden;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out ;
+    z-index: 2;
+    background: white;
   }
   .menu-icon{
     display: block;
+    cursor: pointer;
   }
 
   .nav-li{
@@ -236,5 +264,11 @@ h4 {
     display: block;
     /* PARA DAR ESPAÇO NOS ITENS */
     margin-top: 5px;
+  }
+}
+
+@keyframes moveController {
+  from {
+    transform: translate(-5%, -5%) rotate(-5deg);
   }
 }
