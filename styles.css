@@ -253,6 +253,7 @@ h4 {
     transition: all 0.8s ease-in-out ;
     z-index: 2;
     background: white;
+    outline: none;
   }
   .menu-icon{
     display: block;
